@@ -1,6 +1,6 @@
 # SyntaxSage
 
-A Python-based application.
+SyntaxSage is an AI-powered coding assistant built with Flask and LangChain, utilizing Groq for accelerated language model inference.
 
 ## Setup
 Install requirements:
