@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <meta name="viewport"
+        content = "width=device-width,initial-scale=1.0">
+
+    <title>Ai code AI</title>
+    <link rel="stylesheet"
+    href="{{ url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <div class = "header">
+            <p>Generate Code + Slove Error + Explain Logic</p>
+        </div>
+
+        <form method="POST">
+            <label>Select AI Mode</label>
+
+            <select name="mode" required>
+                <option value="generate">
+                    Generate Code
+                </option>
+
+                <option value="debug">
+                    Solve Error
+                </option>
+
+                <option value="logic">
+                    Explain Logic
+                </option>
+
+            </select>
+            <textarea name="prompt" placeholder="Ask coding Questions..." required></textarea>
+            <button type="submit">
+                Generate Response
+            </button>
+        </form>
+
+        {% if response %}
+
+        <div class="response-box">
+            <h2>AI Response</h2>
+            <pre>{{ response }}</pre>
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+</html>
